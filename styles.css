@@ -169,7 +169,7 @@ main {
     box-sizing: border-box;
     margin: 0 !important;
     padding: 0 20px 40px 20px;
-        position: relative;
+    position: relative;
     /* ajuste fino */
 }
 
@@ -335,7 +335,7 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;  
+    height: 100%;
 }
 
 .services-grid img {
@@ -419,15 +419,15 @@ h2 {
     background: #ffffff;
     padding: 32px 22px;
     border-radius: 16px;
-    box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
     transition: 0.3s ease;
-    border: 1px solid rgba(0,0,0,0.06);
+    border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 /* Hover elegante */
 #numeros .stat:hover {
     transform: translateY(-6px);
-    box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
 }
 
 /* Número grande */
@@ -599,7 +599,7 @@ h2 {
     border-radius: 14px;
     cursor: pointer;
     box-shadow: 0 6px 14px rgba(243, 112, 33, 0.6);
-    
+
 }
 
 .contato-form button:hover {
@@ -687,7 +687,7 @@ h2 {
 }
 
 .carousel-track {
-    transition: transform 2s cubic-bezier(.25,.8,.25,1);
+    transition: transform 2s cubic-bezier(.25, .8, .25, 1);
 }
 
 .team-member {
@@ -949,8 +949,8 @@ h2 {
     display: block !important;
 }
 
-.services-grid > .service-item,
-.services-grid > .service-item * {
+.services-grid>.service-item,
+.services-grid>.service-item * {
     margin: 0 !important;
     padding: 0 !important;
 }
@@ -1009,6 +1009,7 @@ h2 {
     font-weight: 800;
     line-height: 1.1;
 }
+
 .onde-titulo span {
     color: #ff7c24;
 }
@@ -1026,11 +1027,13 @@ h2 {
     padding: 0;
     margin: 0;
 }
+
 .onde-lista li {
     margin-bottom: 25px;
     font-size: 1.2rem;
     cursor: pointer;
 }
+
 .onde-lista li strong {
     font-size: 1.4rem;
     color: #ff7c24;
@@ -1087,10 +1090,21 @@ h2 {
 
 /* Efeito bounce */
 @keyframes bounce {
-    0% { transform: translate(-50%, -100%) scale(1); }
-    40% { transform: translate(-50%, -115%) scale(1.05); }
-    70% { transform: translate(-50%, -95%) scale(0.95); }
-    100% { transform: translate(-50%, -100%) scale(1); }
+    0% {
+        transform: translate(-50%, -100%) scale(1);
+    }
+
+    40% {
+        transform: translate(-50%, -115%) scale(1.05);
+    }
+
+    70% {
+        transform: translate(-50%, -95%) scale(0.95);
+    }
+
+    100% {
+        transform: translate(-50%, -100%) scale(1);
+    }
 }
 
 /* Quando passar o mouse em um item da lista, o pin correspondente anima */
@@ -1099,270 +1113,263 @@ h2 {
 }
 
 /* GOIÂNIA */
-.onde-lista li[data-pin="goiania"]:hover ~ .onde-mapa .pin-goiania,
+.onde-lista li[data-pin="goiania"]:hover~.onde-mapa .pin-goiania,
 .pin-goiania:hover {
     animation: bounce 0.6s ease;
 }
 
 /* PALMAS */
-.onde-lista li[data-pin="palmas"]:hover ~ .onde-mapa .pin-palmas,
+.onde-lista li[data-pin="palmas"]:hover~.onde-mapa .pin-palmas,
 .pin-palmas:hover {
     animation: bounce 0.6s ease;
 }
 
 /* BRASÍLIA */
-.onde-lista li[data-pin="brasilia"]:hover ~ .onde-mapa .pin-brasilia,
+.onde-lista li[data-pin="brasilia"]:hover~.onde-mapa .pin-brasilia,
 .pin-brasilia:hover {
     animation: bounce 0.6s ease;
 }
 
 /* SÃO PAULO */
-.onde-lista li[data-pin="saopaulo"]:hover ~ .onde-mapa .pin-saopaulo,
+.onde-lista li[data-pin="saopaulo"]:hover~.onde-mapa .pin-saopaulo,
 .pin-saopaulo:hover {
     animation: bounce 0.6s ease;
 }
 
-/* ===========================
-   RESPONSIVIDADE GERAL
-   =========================== */
+/* =========================================
+   RESPONSIVIDADE (MEDIA QUERIES)
+========================================= */
 
-/* --- Até 1024px (tablet / notebook menor) --- */
 @media (max-width: 1024px) {
+    .hero-text h1 {
+        font-size: 50px;
+    }
 
-  .container {
-    padding: 20px;
-  }
+    .hero-text p {
+        font-size: 24px;
+    }
 
-  /* HERO */
-  .hero-inner {
-    flex-direction: column;
-    gap: 32px;
-    text-align: center;
-  }
+    .hero-image {
+        width: 350px;
+        height: 500px;
+    }
 
-  .hero-text h1 {
-    font-size: 42px;
-  }
+    #sobre h2 {
+        font-size: 56px;
+    }
 
-  .hero-text p {
-    font-size: 22px;
-    max-width: 100%;
-  }
-
-  .hero-image {
-    width: 100%;
-    max-width: 420px;
-    height: 360px;
-    margin: 0 auto;
-  }
-
-  /* SOBRE */
-  #sobre .container,
-  .sobre-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  #sobre h2 {
-    font-size: 48px;
-  }
-
-  #sobre p {
-    font-size: 18px;
-  }
-
-  /* Carrossel: caixa um pouco mais larga */
-  .member-content {
-    width: 60% !important;
-    left: 6% !important;
-  }
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
 }
 
-/* --- Até 768px (tablet em pé / celulares grandes) --- */
 @media (max-width: 768px) {
 
-  /* HEADER + MENU MOBILE */
-  .site-header {
-    height: 80px;
-  }
+    /* --- HEADER & NAV --- */
+    .site-header {
+        height: 80px;
+    }
 
-  body {
-    padding-top: 80px;
-  }
+    body {
+        padding-top: 80px;
+    }
 
-  .header-inner {
-    padding: 0 20px;
-  }
+    .header-inner {
+        padding: 0 20px;
+    }
 
-  .main-nav {
-    position: absolute;
-    top: 80px;
-    right: 0;
-    background: #00003E;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 16px 24px;
-    gap: 12px;
-    width: 70%;
-    max-width: 280px;
-    display: none;          /* escondido por padrão */
-  }
+    .nav-toggle {
+        display: block;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 1001;
+    }
 
-  .main-nav a {
-    display: block;
-    width: 100%;
-  }
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background: #00003E;
+        flex-direction: column;
+        justify-content: center;
+        transition: 0.4s ease;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        padding: 40px;
+    }
 
-  /* classe que o JS vai adicionar/remover */
-  .main-nav.show {
-    display: flex;
-  }
+    .main-nav.active {
+        right: 0;
+    }
 
-  .nav-toggle {
-    display: block;
-    color: #fff;
-    cursor: pointer;
-  }
+    .main-nav a {
+        font-size: 20px;
+        color: white;
+        margin: 10px 0;
+    }
 
-  /* HERO */
-  .hero-inner {
-    margin-top: 20px;
-  }
+    /* --- HERO --- */
+    .hero {
+        padding-top: 40px;
+        height: auto;
+        min-height: auto;
+    }
 
-  .hero-text h1 {
-    font-size: 32px;
-  }
+    .hero-inner {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+        gap: 40px;
+    }
 
-  .hero-text p {
-    font-size: 18px;
-  }
+    .hero-text h1 {
+        font-size: 40px;
+    }
 
-  /* SOBRE */
-  #sobre {
-    padding: 40px 20px;
-  }
+    .hero-text p {
+        font-size: 18px;
+        margin: 0 auto 20px auto;
+    }
 
-  #sobre h2 {
-    font-size: 40px;
-  }
+    .hero-image {
+        width: 100%;
+        max-width: 350px;
+        height: 400px;
+        margin: 0 auto;
+    }
 
-  #sobre p {
-    font-size: 16px;
-  }
+    /* --- SOBRE --- */
+    #sobre {
+        padding-bottom: 60px !important;
+        height: auto;
+    }
 
-  #sobre .card p {
-    font-size: 15px;
-  }
+    #sobre .container {
+        padding: 0 20px;
+    }
 
-  /* SERVIÇOS – 1 por linha */
-  .services-grid {
-    grid-template-columns: 1fr !important;
-    row-gap: 32px !important;
-  }
+    #sobre .sobre-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
 
-  .services-grid img,
-  .service1,
-  .service2,
-  .service3 {
-    height: 260px;
-  }
+    #sobre h2 {
+        font-size: 42px;
+        text-align: center;
+    }
 
-  /* ONDE ESTAMOS – empilha texto + mapa */
-  .onde-estamos {
-    flex-direction: column;
-    padding: 40px 20px;
-    gap: 30px;
-  }
+    .sobre-text {
+        text-align: center;
+    }
 
-  .mapa-base {
-    width: 100%;
-    max-width: 420px;
-  }
+    .cards {
+        width: 100%;
+    }
 
-  /* CONTATO – formulário abaixo */
-  .contato-container {
-    flex-direction: column;
-    margin: 40px auto;
-  }
+    /* --- SERVIÇOS --- */
+    .services-grid {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
 
-  /* CARROSSEL TIME – vira bloco com altura automática */
-  #time {
-    height: auto !important;
-    min-height: calc(100vh - var(--header-height));
-  }
+    .service-item .thumb {
+        height: 250px !important;
+    }
 
-  #time .carousel {
-    width: 100%;
-  }
+    /* --- ONDE ESTAMOS --- */
+    .onde-estamos {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 40px;
+    }
 
-  #time .team-member {
-    position: relative !important;
-    min-width: 100% !important;
-    height: auto !important;
-    display: flex !important;
-    padding: 40px 20px !important;
-  }
+    .texto,
+    .mapa-base {
+        width: 100%;
+        max-width: 100%;
+    }
 
-  #time .member-content {
-    position: static !important;
-    width: 100% !important;
-    max-height: none !important;
-    margin: 0 !important;
-  }
+    .mapa {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 
-  .carousel-btn {
-    width: 44px;
-    height: 44px;
-  }
+    .mapa-base {
+        height: auto;
+    }
 
-  .carousel-btn.prev { left: 12px; }
-  .carousel-btn.next { right: 12px; }
+    /* Ajuste dos pinos para mobile pode ser complexo se a imagem escalar. 
+       Idealmente, esconder o mapa interativo ou ajustar percentualmente.
+       Vou tentar ajustar a escala do container do mapa. */
+    .mapa {
+        transform: scale(0.8);
+        transform-origin: center top;
+    }
 
-  /* FOOTER */
-  .footer-inner {
-    flex-direction: column;
-    gap: 8px;
-    text-align: center;
-  }
+    /* --- NÚMEROS --- */
+    #numeros h3 {
+        font-size: 32px;
+    }
 
-  /* BOTÃO WHATSAPP MENOR NO MOBILE */
-  .whatsapp-button {
-    width: 52px;
-    height: 52px;
-    bottom: 16px;
-    right: 16px;
-  }
+    /* --- TIME (CAROUSEL) --- */
+    #time .carousel .team-member {
+        padding: 0 20px !important;
+        justify-content: center !important;
+    }
+
+    #time .carousel .team-member .member-content {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        height: auto !important;
+        max-height: 80vh !important;
+        padding: 20px !important;
+    }
+
+    .member-content h2 {
+        font-size: 32px;
+    }
+
+    .member-content h4 {
+        font-size: 24px;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .carousel-btn.prev {
+        left: 10px;
+    }
+
+    .carousel-btn.next {
+        right: 10px;
+    }
+
+    /* --- CONTATO --- */
+    .contato-container {
+        flex-direction: column;
+        margin: 40px auto;
+    }
+
+    .contato-enderecos,
+    .contato-form {
+        width: 100%;
+    }
+
+    /* --- FOOTER --- */
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
 }
-
-/* --- Até 480px (celular pequeno) --- */
-@media (max-width: 480px) {
-
-  .hero-text h1 {
-    font-size: 26px;
-  }
-
-  .hero-text p {
-    font-size: 16px;
-  }
-
-  #numeros h3 {
-    font-size: 28px;
-  }
-
-  #numeros .stat strong {
-    font-size: 30px;
-  }
-
-  #numeros .stat span {
-    font-size: 14px;
-  }
-
-  .contato-enderecos h2 {
-    font-size: 1.7rem;
-  }
-
-  .contato-enderecos h3 {
-    font-size: 1.2rem;
-  }
-}
-
