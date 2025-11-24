@@ -1122,3 +1122,247 @@ h2 {
     animation: bounce 0.6s ease;
 }
 
+/* ===========================
+   RESPONSIVIDADE GERAL
+   =========================== */
+
+/* --- Até 1024px (tablet / notebook menor) --- */
+@media (max-width: 1024px) {
+
+  .container {
+    padding: 20px;
+  }
+
+  /* HERO */
+  .hero-inner {
+    flex-direction: column;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 42px;
+  }
+
+  .hero-text p {
+    font-size: 22px;
+    max-width: 100%;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 420px;
+    height: 360px;
+    margin: 0 auto;
+  }
+
+  /* SOBRE */
+  #sobre .container,
+  .sobre-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #sobre h2 {
+    font-size: 48px;
+  }
+
+  #sobre p {
+    font-size: 18px;
+  }
+
+  /* Carrossel: caixa um pouco mais larga */
+  .member-content {
+    width: 60% !important;
+    left: 6% !important;
+  }
+}
+
+/* --- Até 768px (tablet em pé / celulares grandes) --- */
+@media (max-width: 768px) {
+
+  /* HEADER + MENU MOBILE */
+  .site-header {
+    height: 80px;
+  }
+
+  body {
+    padding-top: 80px;
+  }
+
+  .header-inner {
+    padding: 0 20px;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background: #00003E;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 24px;
+    gap: 12px;
+    width: 70%;
+    max-width: 280px;
+    display: none;          /* escondido por padrão */
+  }
+
+  .main-nav a {
+    display: block;
+    width: 100%;
+  }
+
+  /* classe que o JS vai adicionar/remover */
+  .main-nav.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /* HERO */
+  .hero-inner {
+    margin-top: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text p {
+    font-size: 18px;
+  }
+
+  /* SOBRE */
+  #sobre {
+    padding: 40px 20px;
+  }
+
+  #sobre h2 {
+    font-size: 40px;
+  }
+
+  #sobre p {
+    font-size: 16px;
+  }
+
+  #sobre .card p {
+    font-size: 15px;
+  }
+
+  /* SERVIÇOS – 1 por linha */
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    row-gap: 32px !important;
+  }
+
+  .services-grid img,
+  .service1,
+  .service2,
+  .service3 {
+    height: 260px;
+  }
+
+  /* ONDE ESTAMOS – empilha texto + mapa */
+  .onde-estamos {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .mapa-base {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  /* CONTATO – formulário abaixo */
+  .contato-container {
+    flex-direction: column;
+    margin: 40px auto;
+  }
+
+  /* CARROSSEL TIME – vira bloco com altura automática */
+  #time {
+    height: auto !important;
+    min-height: calc(100vh - var(--header-height));
+  }
+
+  #time .carousel {
+    width: 100%;
+  }
+
+  #time .team-member {
+    position: relative !important;
+    min-width: 100% !important;
+    height: auto !important;
+    display: flex !important;
+    padding: 40px 20px !important;
+  }
+
+  #time .member-content {
+    position: static !important;
+    width: 100% !important;
+    max-height: none !important;
+    margin: 0 !important;
+  }
+
+  .carousel-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .carousel-btn.prev { left: 12px; }
+  .carousel-btn.next { right: 12px; }
+
+  /* FOOTER */
+  .footer-inner {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  /* BOTÃO WHATSAPP MENOR NO MOBILE */
+  .whatsapp-button {
+    width: 52px;
+    height: 52px;
+    bottom: 16px;
+    right: 16px;
+  }
+}
+
+/* --- Até 480px (celular pequeno) --- */
+@media (max-width: 480px) {
+
+  .hero-text h1 {
+    font-size: 26px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  #numeros h3 {
+    font-size: 28px;
+  }
+
+  #numeros .stat strong {
+    font-size: 30px;
+  }
+
+  #numeros .stat span {
+    font-size: 14px;
+  }
+
+  .contato-enderecos h2 {
+    font-size: 1.7rem;
+  }
+
+  .contato-enderecos h3 {
+    font-size: 1.2rem;
+  }
+}
+
